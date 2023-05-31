@@ -27,11 +27,11 @@ jobs:
 
       - name: Run GoReleaser
         # GoReleaser v4.2.0
-        uses: goreleaser/goreleaser-action@f82d6c1c344bcacabba2c841718984797f664a6b
+        uses: goreleaser/goreleaser-action@v4
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          version: 1.16.2
-          args: release --rm-dist --debug ${{ env.SKIP_PUBLISH }}
+          version: latest
+          args: release --clean --debug ${{ env.SKIP_PUBLISH }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GORELEASER_CURRENT_TAG: ${{ steps.version.outputs.TAG_NAME }}
