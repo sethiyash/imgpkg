@@ -54,7 +54,7 @@ release:
   footer: |
     # :open_file_folder: Files Checksum
     ```
-    cat checksums.txt
+    {{./dist/checksums.txt}}
     ```
   # use to change the name of the release.
   name_template: "{{.Tag}}"
@@ -65,7 +65,6 @@ release:
 
   extra_files:
     - glob: ./dist/checksums.txt
-    - glob: ./glob/checksums.txt
 
 changelog:
   # Set it to true if you wish to skip the changelog generation.
