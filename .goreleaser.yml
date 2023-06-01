@@ -51,21 +51,12 @@ release:
   # Default is false.
   prerelease: auto
 
-  footer: |
-    # :open_file_folder: Files Checksum
-    ```
-    cat checksums.txt
-    ```
   # use to change the name of the release.
   name_template: "{{.Tag}}"
 
   # You can disable this pipe in order to not upload any artifacts.
   # Defaults to false.
   disable: false
-
-  extra_files:
-    - glob: ./dist/checksums.txt
-    - glob: ./glob/checksums.txt
 
 changelog:
   # Set it to true if you wish to skip the changelog generation.
